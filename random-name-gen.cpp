@@ -12,7 +12,7 @@ int main()
 	std::cin >> userName;
 
 
-	//Vector is better for this situation than arrey 
+	// Vector is better for this situation than array 
 	// cuz its changeable later on
 	std::vector<std::string> nameList = 
 	{ 
@@ -43,15 +43,15 @@ int main()
 		"the Oathbreaker",
 	};
 
-	//seed the random number generator (optional, 
-	//sicherstellen das es wirklich random ist)
+	// seed the random number generator (optional, 
+	// make sure it's really random)
 	srand(time(nullptr));
 
-	//genrate a random index within the array bounds
+	// genrate a random index within the array bounds
 	// +1 (to the vector size) make it less likely to pick the same name
 	int randomIndex = rand() % (nameList.size() + 1);
 	
-	//pick the name at the random index
+	// pick the name at the random index
 	std::string randomName = nameList[randomIndex];
 
 	std::cout << "Welcome to the Jungle, " << userName << " " << randomName << "!";
